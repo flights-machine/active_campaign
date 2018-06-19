@@ -2,6 +2,12 @@ require 'httparty'
 require 'active_campaign_ruby/core/list'
 require 'active_campaign_ruby/core/contacts'
 require 'active_campaign_ruby/core/campaigns'
+require 'active_campaign_ruby/core/deals'
+require 'active_campaign_ruby/core/forms'
+require 'active_campaign_ruby/core/groups'
+require 'active_campaign_ruby/core/messages'
+require 'active_campaign_ruby/core/tracks'
+require 'active_campaign_ruby/core/users'
 
 module ActiveCampaignRuby
   class Client
@@ -9,7 +15,13 @@ module ActiveCampaignRuby
     include ActiveCampaignRuby::Core::List
     include ActiveCampaignRuby::Core::Campaigns
     include ActiveCampaignRuby::Core::Contacts
-
+    include ActiveCampaignRuby::Core::Deals
+    include ActiveCampaignRuby::Core::Forms
+    include ActiveCampaignRuby::Core::Groups
+    include ActiveCampaignRuby::Core::Messages
+    include ActiveCampaignRuby::Core::Tracks
+    include ActiveCampaignRuby::Core::Users
+    
     API_ENDPOINT = 'https://subdomain.activehosted.com/admin/api.php'
     API_KEY      = 'API_KEY'
     API_OUTPUT   = 'json'
