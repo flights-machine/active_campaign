@@ -1,10 +1,14 @@
 require 'httparty'
 require 'active_campaign_ruby/core/list'
+require 'active_campaign_ruby/core/contacts'
+require 'active_campaign_ruby/core/campaigns'
 
 module ActiveCampaignRuby
   class Client
     include HTTParty
     include ActiveCampaignRuby::Core::List
+    include ActiveCampaignRuby::Core::Campaigns
+    include ActiveCampaignRuby::Core::Contacts
 
     API_ENDPOINT = 'https://subdomain.activehosted.com/admin/api.php'
     API_KEY      = 'API_KEY'
