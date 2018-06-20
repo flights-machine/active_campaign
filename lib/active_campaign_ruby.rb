@@ -7,7 +7,4 @@ rescue LoadError
 end
 
 module ActiveCampaignRuby
-  # Your code goes here...
-
-  binding.pry
 end

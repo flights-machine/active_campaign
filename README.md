@@ -1,8 +1,10 @@
-# ActiveCampaignRuby
+# Active::Campaign::Ruby
+ActiveCampaignRuby is wrapper for the ActiveCampaign API using HttParty.
+It provides all the active-campaign api actions i.e. contact, list.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/active_campaign_ruby`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Links:
+- [API documentation](https://www.activecampaign.com/api/overview.php)
+- [Source Code](https://github.com/flights-machine/active_campaign_ruby)
 
 ## Installation
 
@@ -21,23 +23,28 @@ Or install it yourself as:
     $ gem install active_campaign_ruby
 
 ## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```ruby
+# To setup the client
+client = ActiveCampaign::Client.new(
+        api_endpoint: 'YOUR-ENDPOINT', # e.g. 'https://yourendpoint.api-us1.com/admin/api.php'
+        api_key: 'YOUR-API-KEY') # e.g. 'b8f60a1nm600595d5cc37ede55693451812855f'
+```
+```ruby
+# To fetch all list 
+client.list_list ids: 'all'
+```
+```ruby
+# To Add/Update/Edit Contact 
+response = client.contact_sync(email: 'test@example.com')
+```
 
 ## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/active_campaign_ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+1. Fork it
+2. Create your feature branch (`git checkout -b feature-branch`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Rebase against master we want 1 commit per feature
+5. Push to the branch (`git push origin feature-branch`)
+6. Create new Pull Request
 
 ## License
-
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the ActiveCampaignRuby project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/active_campaign_ruby/blob/master/CODE_OF_CONDUCT.md).
