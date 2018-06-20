@@ -8,10 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = ActiveCampaignRuby::VERSION
   spec.authors       = ["Ben Gelsey"]
   spec.email         = ["ben@bengelsey.com"]
-
-  spec.summary       = %q{Write a short summary, because RubyGems requires one.}
+  spec.summary       = %q{See http://www.activecampaign.com/api/overview.php for more information}
   spec.description   = %q{Write a longer description or delete this line.}
-  spec.homepage      = "https:example.com"
+  spec.homepage      = "https://github.com/flights-machine/active_campaign_ruby"
   spec.license       = "MIT"
 
   if spec.respond_to?(:metadata)
