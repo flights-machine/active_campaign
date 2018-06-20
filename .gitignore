@@ -14,3 +14,6 @@
 *.swp
 *.swo
 *.swn
+
+# Gem buils
+*.gem
